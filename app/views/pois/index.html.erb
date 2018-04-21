@@ -7,8 +7,8 @@
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:title) %></th>
-      <th><%= model_class.human_attribute_name(:lat) %></th>
-      <th><%= model_class.human_attribute_name(:lng) %></th>
+      <th><%= model_class.human_attribute_name(:latitude) %></th>
+      <th><%= model_class.human_attribute_name(:longitude) %></th>
       <th><%= model_class.human_attribute_name(:address) %></th>
       <th><%= model_class.human_attribute_name(:string) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
@@ -20,8 +20,8 @@
       <tr>
         <td><%= link_to poi.id, poi_path(poi) %></td>
         <td><%= poi.title %></td>
-        <td><%= poi.lat %></td>
-        <td><%= poi.lng %></td>
+        <td><%= poi.latitude %></td>
+        <td><%= poi.longitude %></td>
         <td><%= poi.address %></td>
         <td><%= poi.string %></td>
         <td><%=l poi.created_at %></td>

@@ -115,6 +115,7 @@ GEM
     faraday (0.15.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.23)
+    geocoder (1.4.7)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hashie (3.5.7)
@@ -268,6 +269,7 @@ DEPENDENCIES
   devise
   elasticsearch-model
   elasticsearch-rails
+  geocoder
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   mini_magick (~> 4.8)
