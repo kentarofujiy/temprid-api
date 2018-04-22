@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-      respond_to :json
+    respond_to :json
       
     def index
        @users = User.all 
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    user = current_user
+    user = User.find(params[:id])
 
     if user.update(user_params)
       render json: user, status: 200
@@ -42,6 +42,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation, :cpf)
   end
 end
