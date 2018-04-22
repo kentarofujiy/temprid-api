@@ -4,14 +4,14 @@ class PoisController < ApplicationController
   # GET /pois
   # GET /pois.json
   def index
-    @pois = Poi.all
+       @pois = Poi.search(params.fetch(:q, "*"))
+       render json: @pois, status: 200
   end
 
   # GET /pois/1
   # GET /pois/1.json
   def show
   end
-
   # GET /pois/new
   def new
     @poi = Poi.new
